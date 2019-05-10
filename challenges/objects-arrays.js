@@ -6,44 +6,50 @@
   object name, diet, weight, length, period
 */
 
-class Dinosaur {
-  constructor({ name, diet, weight, length, period }) {
-    this.name = name;
-    this.diet = diet;
-    this.weight = weight;
-    this.length = length;
-    this.period = period;
-  }
-}
+// class Dinosaur {
+//   constructor({ name, diet, weight, length, period }) {
+//     this.name = name;
+//     this.diet = diet;
+//     this.weight = weight;
+//     this.length = length;
+//     this.period = period;
+//   }
+// }
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
-const tyrannosaurus = new Dinosaur({
+// new Dinosaur
+const tyrannosaurus = {
   name: 'Tyannosaurus',
   diet: 'Carnivorous',
   weight: '7000kg',
   length: '12m',
-  period: 'Late Cretaceous'
-});
+  period: 'Late Cretaceous',
+  roar: function() {
+    return `RAWERSRARARWERSARARARRRR!`;
+  }
+};
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
-const stegosaurus = new Dinosaur({
+// new Dinosaur
+const stegosaurus = {
   name: 'Stegosaurus',
   diet: 'Herbivorous',
   weight: '2000kg',
   length: '9m',
   period: 'Late Jurassic'
-});
+};
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-const velociraptor = new Dinosaur({
+// new Dinosaur
+const velociraptor = {
   name: 'Velociraptor',
   diet: 'Carnivorous',
   weight: '15kg',
   length: '1.8m',
   period: 'Late Cretaceous'
-});
+};
+//
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -57,11 +63,6 @@ console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
 console.log(tyrannosaurus.period);
-
-// Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-tyrannosaurus.roar = () => {
-  return `RAWERSRARARWERSARARARRRR!`;
-};
 
 console.log(tyrannosaurus.roar());
 

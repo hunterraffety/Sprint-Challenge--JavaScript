@@ -1,5 +1,4 @@
 // ==== Callbacks ====
-const generalArray = ['turkey', 'hotdogs', 'steak'];
 
 /* Step 1: Create a higher-order function that accepts a callback
  * Create a higher-order function named consume that can take 3 parameters.
