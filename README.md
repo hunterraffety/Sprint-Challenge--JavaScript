@@ -42,7 +42,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. Describe the four rules of the 'this' keyword.
 
-### 1. in the global scope, this is the window object or global object w/ node. it's basically a definition of everything javascript contains. 2. implicit binding happens when a function is called by a dot. the object that is doing the calling is 'this'. 3. a new binding is creating when applying a new keyword on a constructor function. 4. an explicit binding occurs when we put them into a new context on purpose using a .call or .apply on the object that is calling the method of an object.
+### 1. in the global scope, this is the window object or global object w/ node. it's basically a definition of everything javascript contains. 2. implicit binding happens when a function is called by a dot. the object that is doing the calling is 'this'. 3. a new binding is creating when applying a new keyword on a constructor function. 4) an explicit binding occurs when we put them into a new context on purpose using a .call or .apply on the object that is calling the method of an object.
 
 5. Why do we need super() in an extended class?
 
