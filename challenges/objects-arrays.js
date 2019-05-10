@@ -170,7 +170,7 @@ console.log(contactInfo);
 const uni = [];
 
 const universitiesWithUni = (arr, query) => {
-  uni.push(arr.filter(ele => ele.university.indexOf(query) !== -1).length);
+  uni.push(arr.filter(ele => ele.university.indexOf(query) !== -1));
 };
 
 universitiesWithUni(graduates, 'Uni');
