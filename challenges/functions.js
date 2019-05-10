@@ -8,13 +8,9 @@ const generalArray = ['turkey', 'hotdogs', 'steak'];
  * In the body of the function return the callback with the two parameters that you created
  */
 
-function checkArray(a, b, cb) {
-  return cb(a + b);
-}
-
-checkArray(5, 7, function(add) {
-  console.log(add);
-});
+let consume = function(x, y, callback) {
+  return callback(x, y);
+};
 
 /* Step 2: Create several functions to callback with consume();
  * Create a function named add that returns the sum of two numbers
@@ -22,16 +18,31 @@ checkArray(5, 7, function(add) {
  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
  */
 
+let add = function(x, y) {
+  return x + y;
+};
+
+let multiply = function(x, y) {
+  return x * y;
+};
+
+let greeting = function(x, y) {
+  return `Hello ${x} ${y}, nice to meet you!`;
+};
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation:
+/* 
+the external constant is being set in the global scope. the internal nested function is inside the main codeblock of myFunction and it falls within the creation of that function, and is created and invoked inside of the main codeblock so it is accessible within that main myFunction.
+*/
 
 const external = "I'm outside the function";
 
