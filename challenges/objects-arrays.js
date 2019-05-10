@@ -67,7 +67,7 @@ console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
 
-// Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
+// Given an array of college graduates.  Complete the following requests using any array methods like .forEach(), .map(), .reduce(), .filter()
 
 const graduates = [
   {
@@ -137,6 +137,17 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+const createUniversityArray = graduates.map(
+  (el = el => {
+    universities.push(el.university);
+    universities.sort();
+    return universities;
+  })
+);
+
+// probably a better way to chain that into a single line -- revisit when complete to refactor.
+
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -146,10 +157,28 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+const gatherStudentInfo = graduates.filter(
+  (info = info => {
+    contactInfo.push(info.first_name, info.email);
+    return contactInfo;
+  })
+);
+
 console.log(contactInfo);
+
+// ========= RETURN TO THIS ONE
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+const universitiesWithUni = (arr, query) => {
+  return uni.push(
+    arr.filter(ele => ele.university.indexOf(query) !== -1).length
+  );
+};
+
+universitiesWithUni(graduates, 'Uni');
 console.log(uni);
 
 // ==== ADVANCED Array Methods ====
